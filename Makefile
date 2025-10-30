@@ -68,6 +68,7 @@ pkg: pkg-x64 pkg-arm64
 pkg-x64: $(MANIFEST)
 	flatpak --user run org.flatpak.Builder \
 	  --user \
+	  --disable-rofiles-fuse \
 	  --arch x86_64 \
 	  --repo "repo" \
 	  --force-clean \
@@ -80,6 +81,7 @@ pkg-x64: $(MANIFEST)
 pkg-arm64: $(MANIFEST)
 	flatpak --user run org.flatpak.Builder \
 	  --user \
+	  --disable-rofiles-fuse \
 	  --arch aarch64 \
 	  --repo "repo" \
 	  --force-clean \

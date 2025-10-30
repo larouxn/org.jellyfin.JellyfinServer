@@ -218,6 +218,8 @@ modules:
             <: 1.4.0
 
   - name: shaderc
+    build-options:
+      cxxflags: -include cstdint
     buildsystem: cmake-ninja
     builddir: true
     config-opts:

@@ -316,6 +316,9 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
+      # TODO: Drop once libplacebo releases a version including commit 12509c0f1ee8.
+      - type: patch
+        path: data/libplacebo-python313-upstream.patch
       - type: git
         url: https://github.com/KhronosGroup/Vulkan-Loader.git
         commit: 40b8e6eeead809a62c708cb48fdd9f8f2eab3f15

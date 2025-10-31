@@ -1,12 +1,12 @@
 id: org.jellyfin.JellyfinServer
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 # NOTE: Modifying data here might break yq in regenerate-sources.yml
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.dotnet9
   - org.freedesktop.Sdk.Extension.node22
-  - org.freedesktop.Sdk.Extension.llvm19
+  - org.freedesktop.Sdk.Extension.llvm21
 separate-locales: false
 command: jellyfin.sh
 
@@ -412,8 +412,8 @@ modules:
           config-opts:
             - -DCMAKE_ASM_NASM_FLAGS=-w-macro-params-legacy
         aarch64:
-          append-path: /usr/lib/sdk/llvm19/bin
-          prepend-ld-library-path: /usr/lib/sdk/llvm19/lib
+          append-path: /usr/lib/sdk/llvm21/bin
+          prepend-ld-library-path: /usr/lib/sdk/llvm21/lib
           env:
             CC: clang
             CXX: clang++
@@ -454,8 +454,8 @@ modules:
               config-opts:
                 - -DCMAKE_ASM_NASM_FLAGS=-w-macro-params-legacy
             aarch64:
-              append-path: /usr/lib/sdk/llvm19/bin
-              prepend-ld-library-path: /usr/lib/sdk/llvm19/lib
+              append-path: /usr/lib/sdk/llvm21/bin
+              prepend-ld-library-path: /usr/lib/sdk/llvm21/lib
               env:
                 CC: clang
                 CXX: clang++
@@ -490,8 +490,8 @@ modules:
               config-opts:
                 - -DCMAKE_ASM_NASM_FLAGS=-w-macro-params-legacy
             aarch64:
-              append-path: /usr/lib/sdk/llvm19/bin
-              prepend-ld-library-path: /usr/lib/sdk/llvm19/lib
+              append-path: /usr/lib/sdk/llvm21/bin
+              prepend-ld-library-path: /usr/lib/sdk/llvm21/lib
               env:
                 CC: clang
                 CXX: clang++
@@ -692,8 +692,8 @@ modules:
   - name: jellyfin-ffmpeg
     disabled: false
     build-options:
-      append-path: /usr/lib/sdk/llvm19/bin
-      prepend-ld-library-path: /usr/lib/sdk/llvm19/lib
+      append-path: /usr/lib/sdk/llvm21/bin
+      prepend-ld-library-path: /usr/lib/sdk/llvm21/lib
       arch:
         x86_64:
           config-opts:

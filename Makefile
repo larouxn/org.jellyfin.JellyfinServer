@@ -7,9 +7,9 @@ VERSION := $(TAG_JELLYFIN)
 # TODO: Needs to be reworked.
 #VERSION := $(shell cat VERSION)
 DOT_NET_VER=9
-LLVM_VER=19
+LLVM_VER=21
 NODE_VER=22
-RUNTIME_VER=24.08
+RUNTIME_VER=25.08
 BUILD_DATE := $(shell date -I)
 GH_ACCOUNT := $(shell gh auth status --active | grep "Logged in to github.com account" | cut -d " " -f 9)
 
